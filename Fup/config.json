@@ -1,0 +1,7 @@
+{
+  "url-backend": "127.0.0.1",
+  "port": 9999,
+
+  "data-db-connection": "mongodb+srv://usuario-pruebas:lNRn1LYsoTrk5IxP@cluster0.nel4qm0.mongodb.net/bd-registro-inventario?retryWrites=true&w=majority",
+  "name-db": "bd-registro-inventario"
+}
