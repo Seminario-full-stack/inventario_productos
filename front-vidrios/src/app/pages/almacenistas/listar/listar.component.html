@@ -1,0 +1,31 @@
+<div class="col-lg-12">
+    <nb-card>
+        <nb-card-header> ADMINISTRACIÓN ALMACENISTAS
+            <button type="button" class="btn btn-success" (click)="agregar()"> 
+                <i class="fas fa-plus"></i>  
+            </button>
+        </nb-card-header>
+        <table class="table">
+            <tr>
+                <th *ngFor="let columaActual of nombresColumnas">{{columaActual}}</th>
+            </tr>
+            <ng-container *ngFor="let almacenistaActual of almacenistas">
+                <tr>
+                    <td>{{almacenistaActual.nombre}}</td>
+                    <td>{{almacenistaActual.apellido}} </td>                    
+                    <td>{{almacenistaActual.cedula}}</td>
+                    <td>{{almacenistaActual.direccion}} </td>
+                    <td>{{almacenistaActual.celular}} </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" (click)="editar(almacenistaActual._id)"> 
+                            <i class="fas fa-pencil-alt"></i> 
+                        </button>
+                        <button type="button" class="btn btn-danger"  (click)="eliminar(almacenistaActual._id)"> 
+                            <i class="fas fa-solid fa-trash"></i> 
+                        </button>
+                    </td>
+                </tr>
+            </ng-container>
+        </table>
+    </nb-card>
+</div>

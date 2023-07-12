@@ -1,0 +1,58 @@
+<div class="col-lg-12">
+    <nb-card>
+        <nb-card-header *ngIf="modoCreacion"> CREAR ALMACENISTA </nb-card-header>
+        <nb-card-header *ngIf="!modoCreacion"> ACTUALIZAR ALMACENISTA </nb-card-header>
+    <nb-card-body>
+        <div class="row">
+            <div class="col-3">
+                <label>Cedula</label>
+            </div>
+            <div class="col-9">
+                <input class="form-control" type="text" 
+                       [disabled]="!modoCreacion" 
+                       [(ngModel)]="elAlmacenista.cedula"> 
+                <p *ngIf="intentoEnvio && elAlmacenista.cedula ">Requerido</p>  
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-3"><label>Nombre</label></div>
+            <div class="col-9">
+                <input class="form-control" type="text" [(ngModel)]="elAlmacenista.nombre">  
+                <p *ngIf="intentoEnvio && elAlmacenista.nombre ">Requerido</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-3"><label>Apellido</label></div>
+            <div class="col-9">
+                <input class="form-control" type="text"
+                       [(ngModel)]="elAlmacenista.apellido">
+                <p *ngIf="intentoEnvio && elAlmacenista.apellido ">Requerido</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-3"><label>direccion</label></div>
+            <div class="col-9">
+                <input class="form-control" type="text"
+                       [(ngModel)]="elAlmacenista.apellido">
+                <p *ngIf="intentoEnvio && elAlmacenista.direccion ">Requerido</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-3"><label>celular</label></div>
+            <div class="col-9">
+                <input class="form-control" type="text"
+                       [(ngModel)]="elAlmacenista.apellido">
+                <p *ngIf="intentoEnvio && elAlmacenista.celular ">Requerido</p>
+            </div>
+        </div>
+        <div class="row">
+                <button *ngIf="modoCreacion"class="btn btn-primary btn-block" (click)="agregar()">Crear</button>
+                <button *ngIf="!modoCreacion"class="btn btn-primary btn-block" (click)="editar()">Actualizar</button>
+        </div>
+    </nb-card-body>
+    </nb-card>
+</div>
