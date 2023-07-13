@@ -45,7 +45,7 @@ export class ListarComponent implements OnInit {
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
       confirmButtonText: 'Si, eliminar'
-    }).then((result) => {
+    })/*.then((result) => {
       if (result.isConfirmed) {
         this.miServicioProveedor.eliminar(id).
           subscribe(data => {
@@ -57,6 +57,6 @@ export class ListarComponent implements OnInit {
             this.ngOnInit();
           });
       }
-    })
+    })*/
   }
 }

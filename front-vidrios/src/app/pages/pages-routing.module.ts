@@ -26,6 +26,11 @@ const routes: Routes = [{
       .then(m => m.ProveedorModule),
     },
     {
+      path: 'producto',
+      loadChildren: () => import('./producto/producto.module')
+      .then(m => m.ProductoModule),
+    },
+    {
       path: 'dashboard',
       component: ECommerceComponent,
     },

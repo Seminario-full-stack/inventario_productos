@@ -44,6 +44,60 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
+    title: 'Vidrios',
+    icon: 'layout-outline',
+    children: [
+      {
+        title: 'Crear almacenista',
+        link: '/pages/almacenistas/crear',
+      },
+      {
+        title: 'Listar almaceista',
+        link: '/pages/almacenistas/listar',
+      },
+    ],
+  },
+  {
+    title: 'Proveedor',
+    icon: 'layout-outline',
+    children: [
+      {
+        title: 'Crear proveedor',
+        link: '/pages/proveedor/crear',
+      },
+      {
+        title: 'Listar proveedor',
+        link: '/pages/proveedor/listar',
+      },
+    ],
+  },
+  {
+    title: 'Productos',
+    icon: 'layout-outline',
+    children: [
+      {
+        title: 'Crear producto',
+        link: '/pages/producto/crear',
+      },
+      {
+        title: 'Listar producto',
+        link: '/pages/proveedor/listar',
+      },
+    ],
+  },
+  {
+    title: 'Iniciar Sesión',
+    icon: 'layout-outline',
+    children: [
+      {
+        title: 'Login',
+        link: '/pages/seguridad/login',
+      },
+    ],
+  },
+  
+  
+  {
     title: 'Forms',
     icon: 'edit-2-outline',
     children: [

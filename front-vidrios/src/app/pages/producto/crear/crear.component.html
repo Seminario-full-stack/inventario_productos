@@ -1,0 +1,61 @@
+<div class="col-lg-12">
+    <nb-card>
+        <nb-card-header *ngIf="modoCreacion">CREAR PRODUCTO
+        </nb-card-header>
+        <nb-card-header *ngIf="!modoCreacion">ACTUALIZAR PRODUCTO
+        </nb-card-header>
+        <nb-card-body>
+            <div class="row">
+                <div class="col-3">
+                    <label>nombre_producto</label>
+                </div>
+                <div class="col-9">
+                    <input class="form-control" type="text"
+                        [disabled]="!modoCreacion"
+                        [(ngModel)]="elProducto.nombre_producto">
+    <p *ngIf="intentoEnvio && elProducto.nombre_producto'' 
+">Requerido</p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-3">
+                    <label>precio</label>
+                </div>
+                <div class="col-9">
+                    <input class="form-control" type="text"
+                        [(ngModel)]="elProducto.precio">
+                    <p *ngIf="intentoEnvio && elProducto.precio''
+    
+">Requerido</p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-3">
+                    <label>cantidad_producto</label>
+                </div>
+                <div class="col-9">
+                    <input class="form-control" type="text"
+                        [(ngModel)]="elProducto.cantidad_producto">
+                    <p *ngIf="intentoEnvio && elProducto.cantidad_producto''
+    
+">Requerido</p>
+                </div>
+                </div>
+                <br>
+                <div class="row">
+                    <button *ngIf="modoCreacion"
+                        class="btn btn-primary btn-
+block" (click)="agregar()">
+                        Crear
+                    </button>
+                    <button *ngIf="!modoCreacion"
+                         class="btn btn-primary btn-
+block" (click)="editar()">
+                    Actualizar
+                </button>
+            </div>
+        </nb-card-body>
+    </nb-card>
+</div>
