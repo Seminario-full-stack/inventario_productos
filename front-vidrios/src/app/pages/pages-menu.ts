@@ -44,7 +44,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
-    title: 'Vidrios',
+    title: 'Almaceista',
     icon: 'layout-outline',
     children: [
       {
